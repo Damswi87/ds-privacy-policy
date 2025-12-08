@@ -1,0 +1,138 @@
+﻿/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - TŁO PEŁNOEKRANOWE i PADDING DLA FIXED FOOTER */
+body {
+    background-image: url("../img/B.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    min-height: 85vh;
+    color: white;
+}
+
+/* KONTENER TREŚCI */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: -2px -2px 5px white, 2px -2px 5px white;
+}
+
+/* NAGŁÓWKI */
+h1, h2 {
+    color: #0088ff;
+    margin-bottom: 10px;
+    padding-top: 15px;
+}
+
+/* PARAGRAFY */
+p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* LINKI */
+a {
+    color: #0088ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+
+/* ---------------------------------- */
+/* STYLIZACJA FOOTERA - ZAWSZE PRZY SPODZIE (FIXED FOOTER) */
+/* ---------------------------------- */
+#main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: black;
+    padding: 10px 50px;
+    color: white;
+    z-index: 1000;
+}
+
+#footer-content {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+    /* Styl dla listy linków w stopce */
+    #footer-content ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+    }
+
+        #footer-content ul li {
+            margin-left: 20px;
+        }
+
+            #footer-content ul li a {
+                text-decoration: none;
+                color: white;
+                transition: color 0.3s;
+            }
+
+                #footer-content ul li a:hover {
+                    color: #0088ff;
+                }
+
+/* ---------------------------------- */
+/* MEDIA QUERIES (RESPONSZYWNOŚĆ) */
+/* ---------------------------------- */
+@media screen and (max-width: 840px) {
+    .container {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-bottom: 50px;
+    }
+
+    #main-footer {
+        padding: 10px 15px; 
+    }
+
+    #footer-content {
+        width: 100%;
+        
+        flex-direction: row;
+        text-align: center;
+    }
+
+        #footer-content ul {
+            
+            flex-direction: row;
+        }
+
+            #footer-content ul li {
+                margin: 0 10px; 
+            }
+}

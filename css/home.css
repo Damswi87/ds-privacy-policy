@@ -1,0 +1,197 @@
+﻿/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY - TŁO PEŁNOEKRANOWE i PADDING DLA FIXED FOOTER */
+body {
+    background-image: url("../img/B.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    min-height: 85vh;
+    padding-bottom: 55px;
+}
+
+/* STYLIZACJA KONTENERA GŁÓWNEGO (NAGŁÓWEK/NAWIGACJA) */
+#container {
+    position: relative;
+    width: 60%;
+    margin: 3% auto;
+    background-color: black;
+    box-shadow: -2px -2px 5px white, 2px -2px 5px white;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+    /* NAWIGACJA - Flexbox */
+    #container > nav {
+        width: 100%;
+        display: flex;
+        min-height: 60px;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+#logo {
+    line-height: 60px;
+    font-size: 30px;
+    padding: 0 50px; 
+    color: white;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px;
+}
+
+/* MENU LISTA (UL) */
+#container > nav > ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    margin-right: 50px;
+}
+
+    #container > nav > ul > li {
+        line-height: 60px;
+        text-align: center;
+        min-width: 120px;
+    }
+
+        #container > nav > ul > li > a {
+            position: relative;
+            margin: 0 20px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s;
+        }
+
+            /* HOVER GŁÓWNEGO MENU - Podświetlanie koloru tekstu */
+            #container > nav > ul > li > a:hover {
+                color: #0088ff;
+            }
+
+/* ---------------------------------- */
+/* STYLIZACJA LOGA GŁÓWNEGO (FIXED) */
+/* ---------------------------------- */
+.site-logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    max-width: 300px;
+    height: auto;
+    margin: 0;
+}
+/* ---------------------------------- */
+/* STYLIZACJA FOOTERA - ZAWSZE PRZY SPODZIE (FIXED FOOTER) */
+/* ---------------------------------- */
+#main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: black;
+    padding: 15px 50px;
+    color: white;
+    z-index: 1000;
+}
+
+#footer-content {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styl dla p wewnątrz stopki */
+#main-footer p {
+    position: static;
+    font-family: 'Whisper', cursive;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Styl dla listy linków w stopce */
+#footer-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    padding-top: 5px;
+}
+
+    #footer-content ul li {
+        margin-left: 20px;
+    }
+
+        #footer-content ul li a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+            #footer-content ul li a:hover {
+                color: #0088ff;
+            }
+
+
+/* ---------------------------------- */
+/* MEDIA QUERIES (Uproszczone) */
+/* ---------------------------------- */
+@media screen and (max-width: 768px) {
+
+    body {
+        padding-bottom: 120px;
+    }
+
+    #container {
+        width: 95%;
+        margin: 5px auto;
+    }
+
+        
+        #container > nav {
+            justify-content: space-between;
+        }
+
+    #logo {
+        padding: 0 20px;
+    }
+
+   
+    #container > nav > ul {
+        margin-right: 20px;
+    }
+
+    /* RESPONSZYWNOŚĆ FIXED FOOTERA */
+    #footer-content {
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #main-footer ul {
+        flex-direction: column;
+        padding-top: 10px;
+        margin-left: 0;
+    }
+
+        #main-footer ul li {
+            margin: 5px 0;
+        }
+
+    .site-logo {
+        max-width: 200px;
+    }
+}

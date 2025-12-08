@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: Arial, sans-serif;
+}
+
+
+.container {
+ 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: left;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 2rem;
+}
+
+.input-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -150px;
+}
+
+.task-input {
+  width: 10%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.button-group {
+    position:absolute;
+    left:250px;
+    top:80px;
+  
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.add-btn {
+  background-color: #28a745;
+  
+}
+
+.clear-btn {
+  background-color: #dc3545;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.styled-table {
+  width: 50%;
+  border-collapse: collapse;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:80px;
+  font-size: 1rem;
+  text-align: left;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.styled-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #dddddd;
+  text-align:center;
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr td button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.styled-table tbody tr td button.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
