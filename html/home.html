@@ -13,16 +13,20 @@
 </head>
 <body>
 
-    <div id="container">
+    <div id="container" class="topnav">
 
         <nav>
             <div id="logo">
                 DS Platform Games
             </div>
 
-            <ul>
+            <ul id="myLinks">
                 <li><a href="Policy.html">Privacy Policy</a></li>
             </ul>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
 
         </nav>
 
@@ -39,5 +43,15 @@
         </div>
     </footer>
 
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myLinks");
+          if (x.style.display === "block") {
+            x.style.display = "none";
+          } else {
+            x.style.display = "block";
+          }
+        }
+    </script>
 </body>
 </html>

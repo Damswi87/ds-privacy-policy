@@ -21,7 +21,7 @@ body {
 #container {
     position: relative;
     width: 60%;
-    margin: 3% auto;
+    margin: 5% auto;
     background-color: black;
     box-shadow: -2px -2px 5px white, 2px -2px 5px white;
     border-radius: 5px;
@@ -40,7 +40,7 @@ body {
 #logo {
     line-height: 60px;
     font-size: 30px;
-    padding: 0 50px; 
+    padding: 0 50px;
     color: white;
     letter-spacing: 2px;
     text-shadow: 2px 2px 5px;
@@ -75,6 +75,17 @@ body {
                 color: #0088ff;
             }
 
+/* IKONA HAMBURGERA - Standardowo ukryta */
+#container > nav .icon {
+    display: none;
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+    line-height: 60px;
+    font-size: 25px;
+}
+
+
 /* ---------------------------------- */
 /* STYLIZACJA LOGA GŁÓWNEGO (FIXED) */
 /* ---------------------------------- */
@@ -88,8 +99,9 @@ body {
     height: auto;
     margin: 0;
 }
+
 /* ---------------------------------- */
-/* STYLIZACJA FOOTERA - ZAWSZE PRZY SPODZIE (FIXED FOOTER) */
+/* STYLIZACJA FOOTERA */
 /* ---------------------------------- */
 #main-footer {
     position: fixed;
@@ -114,65 +126,72 @@ body {
     justify-content: center;
 }
 
-/* Styl dla p wewnątrz stopki */
-#main-footer p {
-    position: static;
-    font-family: 'Whisper', cursive;
-    font-size: 14px;
-    margin: 0;
-}
-
-/* Styl dla listy linków w stopce */
-#footer-content ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    padding-top: 5px;
-}
-
-    #footer-content ul li {
-        margin-left: 20px;
+    /* Style linków w stopce (bez zmian) */
+    #footer-content ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        padding-top: 5px;
     }
 
-        #footer-content ul li a {
-            text-decoration: none;
-            color: white;
-            transition: color 0.3s;
+        #footer-content ul li {
+            margin-left: 20px;
         }
 
-            #footer-content ul li a:hover {
-                color: #0088ff;
+            #footer-content ul li a {
+                text-decoration: none;
+                color: white;
+                transition: color 0.3s;
             }
+
+                #footer-content ul li a:hover {
+                    color: #0088ff;
+                }
 
 
 /* ---------------------------------- */
-/* MEDIA QUERIES (Uproszczone) */
+/* MEDIA QUERIES (ODPOWIEDZIALNOŚĆ) */
 /* ---------------------------------- */
 @media screen and (max-width: 768px) {
 
+    /* Zwiększenie padding-bottom dla body */
     body {
         padding-bottom: 120px;
     }
 
+    /* Zmniejszenie szerokości kontenerów */
     #container {
         width: 95%;
         margin: 5px auto;
     }
 
-        
-        #container > nav {
-            justify-content: space-between;
+        /* UKRYCIE GŁÓWNEJ LISTY MENU i POKAZANIE HAMBURGERA */
+        #container > nav > ul {
+            display: none; /* Domyślnie ukrywamy listę na mobilnym */
+            flex-direction: column; /* Lista będzie pionowa po rozwinięciu */
+            width: 100%; /* Rozciągamy na całą szerokość */
+            position: absolute;
+            top: 60px; /* Pozycjonujemy pod nagłówkiem */
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.5);
         }
 
-    #logo {
-        padding: 0 20px;
-    }
+            #container > nav > ul > li {
+                text-align: left;
+                min-width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
 
-   
-    #container > nav > ul {
-        margin-right: 20px;
-    }
+                #container > nav > ul > li:last-child {
+                    border-bottom: none;
+                }
+
+        /* POKAZANIE IKONY HAMBURGERA */
+        #container > nav .icon {
+            display: block;
+        }
 
     /* RESPONSZYWNOŚĆ FIXED FOOTERA */
     #footer-content {
@@ -191,6 +210,7 @@ body {
             margin: 5px 0;
         }
 
+    /* ZMNIEJSZENIE I CENTROWANIE LOGA WIDOKU MOBILNEGO */
     .site-logo {
         max-width: 200px;
     }

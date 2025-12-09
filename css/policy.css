@@ -101,38 +101,42 @@ a {
                 }
 
 /* ---------------------------------- */
-/* MEDIA QUERIES (RESPONSZYWNOŚĆ) */
+/* MEDIA QUERIES (ODPOWIEDZIALNOŚĆ) */
 /* ---------------------------------- */
-@media screen and (max-width: 840px) {
-    .container {
-        max-width: 95%;
-        margin: 20px auto;
-        padding: 20px;
-    }
-}
-
 @media screen and (max-width: 768px) {
+
+    /* Zwiększenie padding-bottom dla body */
     body {
-        padding-bottom: 50px;
+        padding-bottom: 120px;
     }
 
-    #main-footer {
-        padding: 10px 15px; 
+    /* Zmniejszenie szerokości kontenerów */
+    #container {
+        width: 95%;
+        margin: 5px auto;
     }
 
+        
+
+    /* RESPONSZYWNOŚĆ FIXED FOOTERA */
     #footer-content {
         width: 100%;
-        
-        flex-direction: row;
+        flex-direction: column;
         text-align: center;
     }
 
-        #footer-content ul {
-            
-            flex-direction: row;
+    #main-footer ul {
+        flex-direction: column;
+        padding-top: 10px;
+        margin-left: 0;
+    }
+
+        #main-footer ul li {
+            margin: 5px 0;
         }
 
-            #footer-content ul li {
-                margin: 0 10px; 
-            }
+    /* ZMNIEJSZENIE I CENTROWANIE LOGA WIDOKU MOBILNEGO */
+    .site-logo {
+        max-width: 200px;
+    }
 }
